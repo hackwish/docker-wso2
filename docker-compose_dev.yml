@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  wso2apim:
+    image: hackwish/wso2am:latest
+    ports:
+      - 9443:9443
+      - 8243:8243
+      - 8280:8280
