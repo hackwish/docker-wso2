@@ -3,23 +3,27 @@ version: '2'
 services:
   wso2apim:
     image: hackwish/wso2am:latest
-    # ports:
-    #   - 9443:9443
-    #   - 8243:8243
-    #   - 8280:8280
-    #   - 9711:9711
-    #   - 9611:9611
-    #   - 9099:9099
-    #   - 8099:8099
-    #   - 5672:5672
-    #   - 8672:8672
 
-  wso2ei:
+  wso2ei-integrator:
     image: hackwish/wso2ei:latest
-    # ports:
-    #   - 9543:9443
-    #   - 9445:9445
-    #   - 9446:9446
-    #   - 9643:9643
-    #   - 8343:8243
-    #   - 8380:8280
+    command: sh -c "wso2ei-6.4.0-integrator"
+
+  wso2ei-broker:
+    image: hackwish/wso2ei:latest
+    command: sh -c "wso2ei-6.4.0-broker"
+
+  wso2ei-business-process:
+    image: hackwish/wso2ei:latest
+    command: sh -c "wso2ei-6.4.0-business-process"
+
+  wso2ei-analytics-dashboard:
+    image: hackwish/wso2ei:latest
+    command: sh -c "wso2ei-6.4.0-analytics-dashboard"
+
+  wso2ei-msf4j:
+    image: hackwish/wso2ei:latest
+    command: sh -c "wso2ei-6.4.0-msf4j"
+
+  wso2ei-analytics-worker:
+    image: hackwish/wso2ei:latest
+    command: sh -c "wso2ei-6.4.0-analytics-worker"

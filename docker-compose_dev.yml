@@ -1,25 +1,39 @@
 version: '2'
 
 services:
-  wso2apim:
-    image: wso2am
+  # wso2apim:
+  #   image: wso2am
+  #   ports:
+  #     - 8443:9443
+
+  wso2ei-integrator:
+    image: wso2ei
+    command: sh -c "wso2ei-6.4.0-integrator"
     ports:
       - 9443:9443
-      - 8243:8243
-      - 8280:8280
-      - 9711:9711
-      - 9611:9611
-      - 9099:9099
-      - 8099:8099
-      - 5672:5672
-      - 8672:8672
 
-  wso2ei:
+  wso2ei-broker:
     image: wso2ei
+    command: sh -c "wso2ei-6.4.0-broker"
     ports:
-      - 9543:9443
-      - 9445:9445
       - 9446:9446
+
+  wso2ei-business-process:
+    image: wso2ei
+    command: sh -c "wso2ei-6.4.0-business-process"
+    ports:
+      - 9445:9445
+
+  wso2ei-analytics-dashboard:
+    image: wso2ei
+    command: sh -c "wso2ei-6.4.0-analytics-dashboard"
+    ports:
       - 9643:9643
-      - 8343:8243
-      - 8380:8280
+
+  wso2ei-msf4j:
+    image: wso2ei
+    command: sh -c "wso2ei-6.4.0-msf4j"
+
+  wso2ei-analytics-worker:
+    image: wso2ei
+    command: sh -c "wso2ei-6.4.0-analytics-worker"
