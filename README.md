@@ -1,13 +1,12 @@
-# docker-wso2am
+# docker-wso2
 
-Build a docker image for run a fully operational instance of WSO2 API Manager.
+Build a docker image for run a fully operational instance of WSO2 products.
 
 ## Tags
 - latest
-- 260
 
 ## How to use
-### docker run
+### docker run (example)
 `docker run -it \
 -p 9443:9443 \
 -p 8243:8243 \
@@ -18,6 +17,7 @@ hackwish/wso2am:latest`
 ``docker-compose -f docker-compose_dev.yml up``
 
 ## How to works
+### Api Manager
 ### Develop
 *(Based on info: https://wso2.com/api-management/install/docker/get-started/)*
 
