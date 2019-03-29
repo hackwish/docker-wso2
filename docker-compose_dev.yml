@@ -2,18 +2,24 @@ version: '2'
 
 services:
   wso2apim:
-    image: hackwish/wso2am:latest
+    image: wso2am
     ports:
       - 9443:9443
       - 8243:8243
       - 8280:8280
+      - 9711:9711
+      - 9611:9611
+      - 9099:9099
+      - 8099:8099
+      - 5672:5672
+      - 8672:8672
 
   wso2ei:
-    image: hackwish/wso2ei:latest
+    image: wso2ei
     ports:
-      - 9443:9443
+      - 9543:9443
       - 9445:9445
       - 9446:9446
       - 9643:9643
-      - 8243:8243
-      - 8280:8280
+      - 8343:8243
+      - 8380:8280
