@@ -1,10 +1,10 @@
 version: '2'
 
 services:
-  # wso2apim:
-  #   image: wso2am
-  #   ports:
-  #     - 8443:9443
+  wso2apim:
+    image: wso2am
+    ports:
+      - 8443:9443
 
   wso2ei-integrator:
     image: wso2ei
